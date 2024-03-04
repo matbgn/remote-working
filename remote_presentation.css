@@ -1,0 +1,122 @@
+div#home-remote {
+    width: 80vw;
+}
+
+div#home-remote-striked {
+    width: 80vw;
+    position: relative;
+    /* Ensure the pseudo-element is positioned relative to this div */
+    overflow: hidden;
+    /* Prevents the line from being visible outside the div */
+}
+
+div#home-remote-striked::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    /* Initial width of the line */
+    height: 0.6rem;
+    /* Thickness of the line */
+    background: red;
+    /* Color of the line */
+    animation: strikeLine 1.5s forwards;
+    /* Adjust the duration as needed */
+    animation-play-state: paused;
+    /* Initially pause the animation */
+    transform: rotate(-30deg);
+    transform-origin: bottom left;
+}
+
+/* When the home-remote-striked step is active, play the animation */
+div#home-remote-striked.active::after {
+    animation-play-state: running;
+}
+
+@keyframes strikeLine {
+    0% {
+        width: 0;
+        bottom: 20vw;
+        left: 36vw;
+    }
+
+    100% {
+        width: 22vw;
+        /* Full width of the div */
+        bottom: 20vw;
+        /* Move to the top, adjusting for the line's thickness */
+        left: 36vw;
+    }
+}
+
+.impress-on-racoon-on-fire {
+    /* Custom CSS here */
+    background: black;
+}
+
+.impress-on-minion-on-tears {
+    /* Custom CSS here */
+    background: black;
+}
+
+div#agenda h1 {
+    margin-bottom: 1.3em;
+}
+
+div#agenda ul {
+    padding: 0;
+    /* Removes padding, especially on the left side */
+    margin: 0;
+    /* Adjusts margin for consistency */
+}
+
+div#agenda li {
+    text-align: center;
+    list-style-type: none;
+    /* Removes bullets */
+}
+
+.impress-on-audience .future {
+    display: none;
+}
+
+.impress-on-key-figure-1 {
+    background: white;
+}
+
+.impress-on-key-figure-2 {
+    background: white;
+}
+
+.impress-on-key-figure-3 {
+    background: white;
+}
+
+.impress-on-key-figure-4 {
+    background: white;
+}
+
+.impress-on-mindset {
+    background: white;
+}
+
+.impress-on-radical .future {
+    display: none;
+}
+
+.canvas {
+    width: 80vw;
+}
+
+.impress-on-good-documentation {
+    background: white;
+}
+
+.impress-on-salary-system {
+    background: white;
+}
+
+.impress-on-impact-expertise {
+    background: white;
+}
