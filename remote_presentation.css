@@ -145,6 +145,18 @@ div#agenda li {
     color: white;
 }
 
-#healthiness {
+#happiness {
+    width: 100vw;
+}
+
+.impress-on-happiness {
+    background: white;
+}
+
+.impress-on-happiness-measures {
+    background: white;
+}
+
+#happiness-measures  {
     width: 1048px;
 }
