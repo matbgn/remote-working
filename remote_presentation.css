@@ -124,3 +124,23 @@ div#agenda li {
 #cybersecurity {
     width: 1048px;
 }
+
+.impress-on-isolation {
+    background: black;
+}
+
+.impress-on-isolation .future {
+    display: none;
+}
+
+.impress-on-isolation-danger {
+    background: black;
+}
+
+#isolation {
+    width: 100vw;
+}
+
+#isolation-danger {
+    color: white;
+}
