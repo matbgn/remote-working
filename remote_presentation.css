@@ -160,3 +160,11 @@ div#agenda li {
 #happiness-measures  {
     width: 1048px;
 }
+
+#coffee p {
+    font-size: 500%
+}
+
+.impress-on-get-togethers {
+    background: white;
+}
