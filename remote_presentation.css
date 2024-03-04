@@ -168,3 +168,11 @@ div#agenda li {
 .impress-on-get-togethers {
     background: white;
 }
+
+#sources {
+    width: 1048px;
+}
+
+#sources a {
+    color: orange;
+}
