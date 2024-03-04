@@ -1,9 +1,9 @@
 div#home-remote {
-    width: 80vw;
+    width: 70vw;
 }
 
 div#home-remote-striked {
-    width: 80vw;
+    width: 70vw;
     position: relative;
     /* Ensure the pseudo-element is positioned relative to this div */
     overflow: hidden;
@@ -17,15 +17,15 @@ div#home-remote-striked::after {
     left: 0;
     width: 0;
     /* Initial width of the line */
-    height: 0.6rem;
+    height: 0.4rem;
     /* Thickness of the line */
     background: red;
     /* Color of the line */
-    animation: strikeLine 1.5s forwards;
+    animation: strikeLine 0.4s forwards;
     /* Adjust the duration as needed */
     animation-play-state: paused;
     /* Initially pause the animation */
-    transform: rotate(-30deg);
+    transform: rotate(-28deg);
     transform-origin: bottom left;
 }
 
@@ -37,16 +37,16 @@ div#home-remote-striked.active::after {
 @keyframes strikeLine {
     0% {
         width: 0;
-        bottom: 20vw;
-        left: 36vw;
+        bottom: 19vw;
+        left: 32vw;
     }
 
     100% {
-        width: 22vw;
+        width: 17vw;
         /* Full width of the div */
-        bottom: 20vw;
+        bottom: 19vw;
         /* Move to the top, adjusting for the line's thickness */
-        left: 36vw;
+        left: 32vw;
     }
 }
 
@@ -93,15 +93,11 @@ div#agenda li {
     background: white;
 }
 
-.impress-on-key-figure-4 {
-    background: white;
-}
-
 .impress-on-mindset {
     background: white;
 }
 
-.impress-on-radical .future {
+.radical.future {
     display: none;
 }
 

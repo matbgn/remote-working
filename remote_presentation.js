@@ -87,3 +87,37 @@ new Chart(ctx2, {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Create progress bar container
+    var progressBarContainer = document.createElement('div');
+    progressBarContainer.id = 'progress';
+    progressBarContainer.style.position = 'fixed';
+    progressBarContainer.style.bottom = '0';
+    progressBarContainer.style.left = '0';
+    progressBarContainer.style.width = '100%';
+    progressBarContainer.style.backgroundColor = '#f3f3f3';
+
+    // Create progress bar
+    var progressBar = document.createElement('div');
+    progressBar.id = 'progress-bar';
+    progressBar.style.height = '5px';
+    progressBar.style.width = '0%';
+    progressBar.style.backgroundColor = 'orange';
+    // Add transition for smooth width change
+    progressBar.style.transition = 'width 0.5s ease-out';
+
+    // Append progress bar to its container, and container to the body
+    progressBarContainer.appendChild(progressBar);
+    document.body.appendChild(progressBarContainer);
+
+    // Existing code to update progress bar on slide change
+    var stepCount = document.querySelectorAll('.step').length;
+    document.addEventListener('impress:stepenter', function(e) {
+        var currentSlide = e.target;
+        var currentSlideProgress = Array.from(document.querySelectorAll('.step')).indexOf(currentSlide) + 1;
+        var progressPerStep = 100 / stepCount;
+        var progress = Math.ceil(currentSlideProgress * progressPerStep);
+        document.getElementById('progress-bar').style.width = progress + '%';
+    });
+});
